@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Expense Tracker</h1>
+    <form id="expenseForm">
+      <label for="description">Expense Description:</label>
+      <input type="text" id="description" required />
+      <label for="amount">Amount Spent:</label>
+      <input type="number" id="amount" required />
+      <label for="date">Date of Expense:</label>
+      <input type="date" id="date" required />
+      <button type="submit">Add Expense</button>
+    </form>
+
+    <div>
+      <h2>Total Expenses: $<span id="totalExpenses">0</span></h2>
+    </div>
+
+    <h2>Expense Report</h2>
+    <ul id="expenseList"></ul>
+
+    <h3>Filter by Date Range</h3>
+    <label for="startDate">Start Date:</label>
+    <input type="date" id="startDate" />
+    <label for="endDate">End Date:</label>
+    <input type="date" id="endDate" />
+    <button id="filterButton">Filter</button>
+
+    <button id="fetchReportButton">Fetch Expense Report</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
